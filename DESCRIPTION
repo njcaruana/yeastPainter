@@ -1,4 +1,4 @@
-Package: yeastPainterApp
+Package: yeastPainter
 Title: Shiny App for painting yeast protein structures by fold change.
 Version: 0.0.0.9000
 Authors@R:
