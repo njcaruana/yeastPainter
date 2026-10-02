@@ -14,11 +14,11 @@ This to ensure the package ShinyPDBPainter correctly works and this version of N
 
 Current R version tested - 4.5.1 
 
-Install the current development version from [GitHub](https://github.com/) by downloading the package [Go to 'Code' above and download the zip]:
-Once downloaded, unzip.
-Open the terminal if on Mac or powershell if on PC. 
+1. Install the current development version from [GitHub](https://github.com/) by downloading the package. To download go to 'Code' above and download the zip.
+2. Once downloaded, unzip.
+3. Open the terminal if on Mac or powershell if on PC. 
 
-To run the app, run the code below in the terminal: 
+To run the app, run the code below in the terminal, please note that the folder location you have saved the project in needs to be added to the code: 
 ``` bash
 Rscript -e "pkgload::load_all('[folderlocation]/YeastPainter'); run_app()"
 ```
