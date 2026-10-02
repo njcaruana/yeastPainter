@@ -154,7 +154,7 @@ golem_add_external_resources <- function() {
     ),
     bundle_resources(
       path = app_sys("app/www"),
-      app_title = "yeastPainterApp",
+      app_title = "yeastPainter",
       # Version the bundle by the newest file in www/. golem's default is a
       # fixed "0.0.1", which keeps the URL identical forever, so browsers serve
       # stale JS and CSS after an edit. Deriving it from mtimes means editing a
