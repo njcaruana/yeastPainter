@@ -219,7 +219,7 @@ mod_about_server <- function(id, r = NULL) {
 
     output$colophon <- renderUI({
       version <- tryCatch(
-        as.character(utils::packageVersion("yeastPainterApp")),
+        as.character(utils::packageVersion("yeastPainter")),
         error = function(e) NULL
       )
       tags$div(
