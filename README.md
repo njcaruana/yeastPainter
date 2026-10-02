@@ -9,34 +9,19 @@ Package to 'Paint' PDB structures with proteomics logfc intensities within the Y
 
 ## Installation
 
-1. Install the current development version from [GitHub](https://github.com/) by downloading the package. To download go to 'Code' above and download the zip.
-2. Once downloaded, unzip.
-3. Open the terminal if on Mac or powershell if on PC. 
+Current R version tested - 4.5.1 
 
-To run the app, run the code below in the terminal, please note that the folder location you have saved the project in needs to be added to the code: 
-``` bash
-Rscript -e "pkgload::load_all('[folderlocation]/YeastPainter'); run_app()"
+Install the current development version from [GitHub](https://github.com/) with:
+
+``` {.r}
+install.packages("remotes")
+remotes::install_github("njcaruana/yeastPainter")
+remotes::install_github("njcaruana/NGLVieweR", force = TRUE)
 ```
-
-The application will run with the text below and open a local instance of the program:
-
-``` bash
-ℹ Loading yeastPainterApp
-There were 14 warnings (use warnings() to see them)
-Loading required package: shiny
-Warning: package ‘shiny’ was built under R version 4.5.2
-
-Attaching package: ‘shiny’
-
-The following object is masked from ‘package:yeastPainterApp’:
-
-    runExample
-
-Listening on http://1.0.0.1:2457
+To run:
+``` {.r}
+yeastPainter::run_app()
 ```
-In your browser, copy and paste the html IP address (this will look different to all individuals).
-
-
 
 ## Additional Info.
 
