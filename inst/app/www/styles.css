@@ -1,0 +1,675 @@
+/* Sidebar styles   */
+.sidebar {
+  height: 90vh;
+  overflow-y: auto;
+}
+.treeview-menu{
+  padding-bottom: 15px;
+}
+.btn-link {
+  font-weight: 700;
+}
+
+
+.main-header .navbar .header-link > a {
+  font-family: "Termina", Arial, sans-serif !important;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #1e447e;
+}
+
+.main-header .navbar .header-link > a:hover {
+  color: #3c8dbc;
+}
+
+
+/* sequenceOuput   */
+#sequence .btn-primary{
+  background-color: black;
+  margin: 0;
+  padding: 5px;
+}
+#sequence {
+  margin: 0;
+  padding: 0;
+}
+#sequenceOutput_ui_1-PDBsequence{
+  height: 100% !important;
+  margin: 0;
+}
+.box{
+  margin: 0;
+  border: 0;
+  box-shadow:0 0 0;
+}
+.box.box-solid.box-primary > .box-header {
+  background-color: #c8d2d6;
+}
+.box.box-solid.box-primary{
+  border-color: #fff;
+}
+.content{
+  padding: 10px 0 0 0;
+}
+.content-wrapper{
+  background-color: black;
+}
+
+/* NGLVieweR output */
+#NGLVieweROutput_ui_1-structure{
+  height: calc(91vh) !important;
+}
+
+#labelcontrols_ui_1-labelBox .btn-primary{
+  background-color: #1B447F;
+  margin: 0;
+  padding: 5px;
+}
+
+.hideBox {
+visibility: hidden;
+}
+
+#ComplexityOutput_ui_1-complexTable {
+  background-color: white;
+}
+
+
+.floating-panel.hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.floating-panel.visible {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Termina";
+  src: url("fonts/Termina-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Termina";
+  src: url("fonts/Termina-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Termina";
+  src: url("fonts/Termina-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* LogFC gradient legend container */
+.logfc-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  width: 200px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: sans-serif;
+}
+
+
+/* The gradient bar itself */
+.logfc-gradient {
+  height: 20px;
+  background: linear-gradient(
+    to right,
+    #2166ac,
+    #f7f7f7,
+    #b2182b
+  );
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
+/* Numeric labels below the bar */
+.logfc-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.logfc-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.logfc-ticks span {
+  white-space: nowrap;
+}
+
+
+/* ---------- Workflow rail ---------- */
+/* A horizontal stepper in place of the tab strip. The sidebar keeps the
+   controls; this shows where you are in the pipeline and what is done. */
+
+#tabset1.nav-tabs {
+  display: none;
+}
+
+.wf-rail {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #d6dde2;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  overflow-x: auto;
+}
+
+.wf-steps {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+}
+
+.wf-step {
+  flex: 1 1 0;
+  min-width: 132px;
+  border-right: 1px solid #eceff1;
+}
+
+.wf-step > a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  color: #5b6b76;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.wf-step > a:hover {
+  background: #f5f8fa;
+  color: #243d63;
+}
+
+/* Current stage */
+.wf-step.wf-active > a {
+  color: #243d63;
+  border-bottom-color: #3c8dbc;
+  background: #f5f8fa;
+}
+
+.wf-mark {
+  flex: 0 0 22px;
+  height: 22px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #c3ced6;
+  font-size: 11px;
+  color: #8b9ba5;
+}
+
+/* Completed stages get a tick instead of their step number. */
+.wf-step.wf-done .wf-mark {
+  background: #8bc34a;
+  border-color: #8bc34a;
+  color: #ffffff;
+}
+
+.wf-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  min-width: 0;
+}
+
+.wf-label {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.wf-hint {
+  font-size: 10.5px;
+  color: #93a3ad;
+  white-space: nowrap;
+}
+
+.wf-aside {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 14px;
+  border-left: 1px solid #eceff1;
+  white-space: nowrap;
+}
+
+.wf-aside > a {
+  font-size: 12px;
+  color: #5b6b76;
+  text-decoration: none;
+}
+
+.wf-aside > a:hover {
+  color: #243d63;
+}
+
+.wf-count {
+  font-size: 11px;
+  color: #93a3ad;
+}
+
+/* ---------- Sidebar menu sections ---------- */
+/* The Data and Structure menus each gather what used to be several menus, so
+   their parts need separating. */
+
+.sidebar-section {
+  padding: 10px 15px 4px 15px;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8aa4b1;
+}
+
+.sidebar-divider {
+  border-top: 1px solid #374850;
+  margin: 10px 15px;
+}
+
+/* ---------- Keep sidebar controls inside the sidebar ---------- */
+/* Select, selectize and picker widgets size themselves to their content, so a
+   long complex name or a full sample-column path pushed the control past the
+   sidebar edge and out of view. Constrain them and ellipsise what overflows. */
+
+.main-sidebar .form-group,
+.main-sidebar .shiny-input-container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.main-sidebar .shiny-input-container > label {
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.35;
+}
+
+.main-sidebar .form-control,
+.main-sidebar .selectize-control,
+.main-sidebar .selectize-input,
+.main-sidebar .bootstrap-select,
+.main-sidebar .btn-group,
+.main-sidebar .irs {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Chosen values: ellipsise rather than widen the control. */
+.main-sidebar .selectize-input > .item,
+.main-sidebar .filter-option-inner-inner,
+.main-sidebar .bootstrap-select .dropdown-toggle .filter-option {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Multi-select selectize (complexes, sample columns) wraps its chips instead
+   of growing sideways. */
+.main-sidebar .selectize-input.items {
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+/* The open dropdown list itself. */
+.main-sidebar .selectize-dropdown,
+.main-sidebar .bootstrap-select .dropdown-menu {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.main-sidebar .selectize-dropdown .option,
+.main-sidebar .bootstrap-select .dropdown-menu li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* File input: the "No file selected" field overflowed on long names. */
+.main-sidebar .input-group,
+.main-sidebar .form-control[readonly] {
+  max-width: 100%;
+}
+
+/* Buttons that were given fixed side margins can exceed the width once the
+   sidebar padding is applied. */
+.main-sidebar .btn {
+  max-width: calc(100% - 30px);
+  white-space: normal;
+}
+
+/* shinydashboard sets white-space: nowrap on treeview menu items, so any text
+   inside an expanded menu was clipped at the sidebar edge rather than
+   wrapping. Let everything inside a menu wrap. */
+.main-sidebar {
+  overflow-x: hidden;
+}
+
+.main-sidebar .treeview-menu,
+.main-sidebar .treeview-menu > li,
+.main-sidebar .treeview-menu div,
+.main-sidebar .treeview-menu span,
+.main-sidebar .treeview-menu label,
+.main-sidebar .sidebar-section {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* The file input keeps Bootstrap's own input-group layout: overriding it with
+   flex collapsed the Browse button's label to nothing. Only the button's
+   max-width needs relaxing, since the generic .btn rule above would clip it. */
+.main-sidebar .input-group > .input-group-btn > .btn-file,
+.main-sidebar .btn-file {
+  white-space: nowrap;
+  max-width: none;
+}
+
+/* The wrap rule above is for prose - headings, notes, long labels. A widget's
+   displayed value must not wrap, or a multi-select lists every chosen item
+   down the sidebar. Keep those on one line and ellipsise. */
+.main-sidebar .treeview-menu .filter-option,
+.main-sidebar .treeview-menu .filter-option-inner,
+.main-sidebar .treeview-menu .filter-option-inner-inner,
+.main-sidebar .treeview-menu .selectize-input > .item,
+.main-sidebar .treeview-menu input.form-control,
+.main-sidebar .treeview-menu textarea.form-control {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Not the selectize wrapper. Selectize copies the original select's
+   form-control class onto .selectize-control and renders its dropdown inside
+   that element, so clipping it hides every option - the complex picker looked
+   empty because its list was being cut off. */
+.main-sidebar .selectize-control,
+.main-sidebar .selectize-control.form-control {
+  overflow: visible;
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.main-sidebar .selectize-dropdown {
+  z-index: 1100;
+}
+
+/* ---------- Tighten the sidebar ---------- */
+/* Shiny's default input spacing is built for a full-width page; stacked in a
+   230px column it leaves large gaps between controls. */
+
+.main-sidebar .form-group,
+.main-sidebar .shiny-input-container {
+  margin-bottom: 8px;
+}
+
+.main-sidebar .shiny-input-container > label,
+.main-sidebar .control-label {
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+/* Buttons carried generous inline margins from when they sat alone in a menu. */
+.main-sidebar .btn,
+.main-sidebar .btn-default {
+  margin: 4px 15px !important;
+}
+
+.main-sidebar .input-group .btn,
+.main-sidebar .btn-file {
+  margin: 0 !important;
+}
+
+/* Sliders reserve room for a tick grid that is mostly empty here. */
+.main-sidebar .js-irs-0,
+.main-sidebar .irs--shiny {
+  margin-bottom: 0;
+}
+
+.main-sidebar .irs {
+  height: 42px;
+}
+
+.main-sidebar .irs-with-grid {
+  height: 58px;
+}
+
+/* materialSwitch rows. */
+.main-sidebar .form-group.shiny-input-container .pretty,
+.main-sidebar .material-switch {
+  margin-bottom: 4px;
+}
+
+/* The file input's two-line label plus group. */
+.main-sidebar .shiny-input-container .progress {
+  margin-bottom: 4px;
+  height: 4px;
+}
+
+/* Section dividers were spaced for a longer list. */
+.sidebar-divider {
+  margin: 8px 15px;
+}
+
+.sidebar-section {
+  padding: 6px 15px 2px 15px;
+}
+
+/* ---------- Consistent labels and buttons ---------- */
+/* materialSwitch renders a plain label, which came out 14px/400 against the
+   12px/700 of every other input heading. Match them. */
+.main-sidebar .treeview-menu .control-label,
+.main-sidebar .treeview-menu .shiny-input-container > label,
+.main-sidebar .treeview-menu .material-switch > label,
+.main-sidebar .treeview-menu .form-group > label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+/* Buttons shared a left edge but not a width, so they read as ragged. Give
+   them all the same block width so they line up with each other. The file
+   input's Browse and the picker's own toggle are part of composite widgets
+   and keep their intrinsic sizing. */
+.main-sidebar .treeview-menu .btn:not(.btn-file):not(.dropdown-toggle):not(.actions-btn) {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 6px 15px !important;
+  text-align: center;
+  white-space: normal;
+}
+
+/* ---------- About page ---------- */
+/* Uses the same panels as the rest of the app rather than a black slab. */
+
+.about-intro p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #4a5a64;
+  max-width: 820px;
+  margin-bottom: 12px;
+}
+
+.about-intro strong {
+  color: #243d63;
+}
+
+.about-cta {
+  margin-top: 6px;
+  color: #ffffff;
+  background-color: #243d63;
+  border-color: #243d63;
+  padding: 7px 18px;
+}
+
+.about-cta:hover,
+.about-cta:focus {
+  color: #ffffff;
+  background-color: #2f5183;
+  border-color: #2f5183;
+}
+
+.about-note {
+  font-size: 13px;
+  color: #6b7b85;
+  max-width: 820px;
+  margin-bottom: 14px;
+}
+
+/* Stage cards: the same five steps as the rail, each a shortcut to its tab. */
+.about-stages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.about-card {
+  display: block;
+  padding: 14px;
+  border: 1px solid #dfe5e9;
+  border-radius: 3px;
+  background: #fbfcfd;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.12s, box-shadow 0.12s;
+}
+
+.about-card:hover,
+.about-card:focus {
+  border-color: #3c8dbc;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.about-card-num {
+  flex: 0 0 20px;
+  height: 20px;
+  line-height: 19px;
+  text-align: center;
+  border-radius: 50%;
+  background: #243d63;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.about-card-icon {
+  color: #3c8dbc;
+}
+
+.about-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #243d63;
+}
+
+.about-card-text {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #5b6b76;
+  margin: 0;
+}
+
+/* Data sources */
+.about-sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px 20px;
+}
+
+.about-source {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-top: 1px solid #eef1f3;
+}
+
+.about-source > a {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #3c8dbc;
+  text-decoration: none;
+}
+
+.about-source > a:hover {
+  text-decoration: underline;
+}
+
+.about-source-use {
+  font-size: 12px;
+  color: #7b8a95;
+  line-height: 1.4;
+}
+
+.about-colophon {
+  padding: 4px 4px 18px 4px;
+  font-size: 12px;
+  color: #93a3ad;
+}
+
+.about-colophon a {
+  color: #7b8a95;
+  text-decoration: none;
+}
+
+.about-colophon a:hover {
+  color: #3c8dbc;
+  text-decoration: underline;
+}
+
+.about-dot {
+  margin: 0 8px;
+  color: #c3ced6;
+}
+
+/* About panel headings use the header's typeface so they read as titles
+   rather than as another box label. Scoped to the About page: the same
+   treatment on every box in the app would stop it standing out. */
+.about-page .box-header > .box-title {
+  font-family: "Termina", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #1e447e;
+}

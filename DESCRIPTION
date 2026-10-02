@@ -1,0 +1,45 @@
+Package: yeastPainterApp
+Title: Shiny App for painting yeast protein structures by fold change.
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "Nikeisha",
+           family = "Caruana",
+           role = c("aut", "cre"),
+           email = "nikeisha.caruana@unimelb.edu.au")
+Description: Colours the chains of a PDB structure by log2 fold change,
+    resolving Saccharomyces cerevisiae gene names, systematic ORF names and
+    UniProt accessions against the reviewed S288C proteome.
+License: MIT + file LICENSE
+Imports:
+    bsplus,
+    colourpicker,
+    config,
+    dplyr,
+    golem,
+    htmltools,
+    htmlwidgets,
+    httr,
+    NGLVieweR,
+    RcppSimdJson,
+    readr,
+    scales,
+    shiny,
+    shinydashboard,
+    shinydashboardPlus,
+    shinyjqui,
+    shinyjs,
+    shinyWidgets,
+    stats,
+    stringr,
+    tidyr,
+    tools,
+    utils,
+    uuid,
+    rlang
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.3
+Suggests:
+    openxlsx,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
